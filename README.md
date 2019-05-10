@@ -3,20 +3,7 @@ makecode Four Digit Display (TM1637) Package for microbit
 
 LED Digit Display Module with 1-6 (normal four) 7-segment LED, it can show number. It has TM1637 chip inside, control with a 2-wire interface.  
 
-Author: shaoziyang  
-Date:   2018.Mar  
-
-![](https://raw.githubusercontent.com/microbit-makecode-packages/TM1637/master/icon.png)
-
-## Usage
-
-open your microbit makecode project, in Add Package, paste  
-
-https://github.com/microbit-makecode-packages/TM1637  
-
-to search box then search.
-
-![](https://raw.githubusercontent.com/microbit-makecode-packages/TM1637/master/4-LED.jpg)
+![](https://github.com/DoraLC/pxt-TM1637/blob/master/4-LED.jpg)
 
 ## API
 
@@ -53,10 +40,6 @@ show, True will show DP, other will hide it
 - **intensity(dat: number)**  
 set display intensity.  
 
-## Demo
-
-![](https://raw.githubusercontent.com/microbit-makecode-packages/TM1637/master/demo.jpg)
-
 ## License  
 
 MIT
@@ -66,6 +49,3 @@ Copyright (c) 2018, microbit/micropython Chinese community
 ## Supported targets  
 
 * for PXT/microbit
-
-
-[From microbit/micropython Chinese community](http://www.micropython.org.cn) 
