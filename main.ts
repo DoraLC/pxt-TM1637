@@ -194,25 +194,19 @@ namespace TM1637 {
         }
 
         /**
-         * turn on LED. 
+         * turn on/off LED. 
          */
-        //% blockId="TM1637_on" block="turn on %display"
+        //% blockId="TM1637_on" block="turn on %onflag | %display"
+        //% onflag.shadow="toggleOnOff"
         //% weight=86 blockGap=8
         //% parts="TM1637"
-        on() {
-            this._ON = 8;
-            this._write_data_cmd();
-            this._write_dsp_ctrl();
-        }
-
-        /**
-         * turn off LED. 
-         */
-        //% blockId="TM1637_off" block="turn off %display"
-        //% weight=85 blockGap=8
-        //% parts="TM1637"
-        off() {
-            this._ON = 0;
+        on(onflag: boolean) {
+            if (onflag){
+                this._ON = 8;
+            }
+            else {
+                this._ON = 0;
+            }
             this._write_data_cmd();
             this._write_dsp_ctrl();
         }
