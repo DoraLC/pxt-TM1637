@@ -93,7 +93,7 @@ namespace TM1637 {
         //% parts="TM1637"
         intensity(val: number = 7) {
             if (val < 1) {
-                this.off();
+                this.on(false);
                 return;
             }
             if (val > 8) val = 8;
