@@ -89,7 +89,6 @@ namespace TM1637 {
          * @param val the brightness of the TM1637, eg: 7
          */
         //% blockId="TM1637_set_intensity" block="%tm|set intensity %val"
-        //% val.min=0 val.max=7
         //% weight=50 blockGap=8
         //% parts="TM1637"
         intensity(val: number = 7) {
@@ -195,22 +194,29 @@ namespace TM1637 {
         }
 
         /**
-         * turn on/off LED. 
+         * turn on LED. 
          */
-        //% blockId="TM1637_on" block="turn %onflag %tm"
-        //% onflag.shadow="toggleOnOff"
+        //% blockId="TM1637_on" block="turn on %tm"
         //% weight=86 blockGap=8
         //% parts="TM1637"
-        on(onflag: boolean) {
-            if (onflag){
-                this._ON = 8;
-            }
-            else {
-                this._ON = 0;
-            }
+        on() {
+            this._ON = 8;
             this._write_data_cmd();
             this._write_dsp_ctrl();
         }
+
+        /**
+         * turn off LED. 
+         */
+        //% blockId="TM1637_off" block="turn off %tm"
+        //% weight=85 blockGap=8
+        //% parts="TM1637"
+        off() {
+            this._ON = 0;
+            this._write_data_cmd();
+            this._write_dsp_ctrl();
+        }
+    }
 
     /**
      * create a TM1637 object.
